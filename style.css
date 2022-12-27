@@ -1,0 +1,192 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+a{
+    color: #fff;
+}
+
+body{
+    background: url('img/anne.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden; /* impede a rolagem vertical*/
+}
+
+header{
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    gap: 60px;
+    padding: 1px 48px;
+    background-color: #0c0c0c;
+    box-shadow: 2px 2px 10px black;
+}
+
+header .logo{
+    width: 90px;
+    display: flex;
+}
+
+header a{
+    font-size: 13px;
+}
+
+.navigation{
+    display: flex;
+    justify-content: space-around;
+}
+
+.navigation ul{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.navigation ul li a{
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    transition: all .6s;
+}
+
+.navigation ul li a:hover{
+    border-bottom: 2px solid #df0707;
+}
+
+.secondary-search{
+    font-weight: bold;
+    margin-left: 19em;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    justify-content: space-between;
+}
+
+.secondary-search .notification{
+    filter: invert(1);
+}
+
+.navigation .profile{
+    cursor: pointer;
+}
+
+/* .logo-anne{
+    filter: invert(1);
+} */
+
+/* Main */
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 40em;
+    margin-top: 1em;
+}
+
+main section{
+    display: flex; 
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 2.5em;
+}
+
+main section .logo-anne{
+    width: 25em;
+    margin: 3em 0;
+    filter: brightness(30%);
+}
+
+main section .btn-box{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn-box .btn{
+    padding: 13px 25px;
+    background-color: #0c0c0c;
+    color: #fff;
+    margin-bottom: 2em;
+    border-bottom: 2px solid #fff;
+    transition: all .3s;
+}
+
+.btn-box .btn:hover{
+    background-color: #6D411A;
+}
+
+.btn-box .btn:focus{ /* méntém pressionado */
+    background-color: #6D411A;
+}
+
+main section .text{
+    color: #fff;
+    line-height: 22px;
+}
+
+.btn-box2{
+    display: flex;
+    align-items: center;
+    color: #fff;
+    background: #ba0c0c;
+    padding: 10px 20px;
+    margin-top: 2em;
+    border-radius: 5px;
+    font-size: 18px;
+    gap: 15px;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.btn-box2:hover{
+    background-color: 	#980a0a;
+}
+
+.btn-box2 .play{
+    width: 1.4em;
+    filter: invert(1);
+}
+
+footer .cards{
+    display: flex;
+    align-items: center;
+    flex-flow: row;
+    margin-left: 15em;
+    margin-top: 1.5em;
+}
+
+footer .cards .card{
+    height: 120px;
+    max-width: 300px;
+    box-shadow: 12px 0px 32px 2px;
+    margin-left: -120px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    overflow: hidden;
+}
+
+footer .cards .card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* faz a imagem preencher um container sem achatar */
+}
+
+.cards .card:hover{
+    transform: translateY(-16px) rotate(3deg);
+}
+
+.cards .card:hover ~ .card{
+    transform: translateX(140px); /* ao passar o mouse em cima de uma imagem, ele irá dar um espaço na horizontal para que o usuário possa ter uma visão melhor da imagem. */
+}
